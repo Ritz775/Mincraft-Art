@@ -10,7 +10,7 @@ player_y = 10;
 var player_object = "";
 
 function player_update() {
-  fabric.Image.fromURL("coolo.png", function (Img) {
+  fabric.Image.fromURL("player.png", function (Img) {
     player_object = Img;
     player_object.scaleToWidth(150);
     player_object.scaleToHeight(140);
@@ -116,7 +116,7 @@ function up() {
     console.log(
       "When up arrow key is pressed, X =" + player_x + " Y= " + player_y
     );
-    canvas.add(player_object);
+    canvas.remove(player_object);
     player_update();
   }
 }
@@ -128,7 +128,7 @@ function down() {
     console.log(
       "When down arrow key is pressed, X =" + player_x + " Y= " + player_y
     );
-    canvas.add(player_object);
+    canvas.remove(player_object);
     player_update();
   }
 }
@@ -140,7 +140,7 @@ function left() {
     console.log(
       "When left arrow key is pressed, X =" + player_x + " Y= " + player_y
     );
-    canvas.add(player_object);
+    canvas.remove(player_object);
     player_update();
   }
 }
@@ -152,7 +152,7 @@ function right() {
     console.log(
       "When right arrow key is pressed, X =" + player_x + " Y= " + player_y
     );
-    canvas.add(player_object);
+    canvas.remove(player_object);
     player_update();
   }
 }
